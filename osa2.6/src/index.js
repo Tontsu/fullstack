@@ -125,7 +125,7 @@ class App extends React.Component {
   }
 
   handleNumberDelete = (event) => {
-    const id = Number(event.target.value)
+    const id = event.target.value
     const found = this.state.persons.find(person => person.id === id)
     if (window.confirm(`Poistetaanko ${found.name}?`)) {
       event.preventDefault()
